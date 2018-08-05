@@ -1,0 +1,22 @@
+# dependencies
+node_modules
+
+# testing
+coverage
+junit.xml
+
+# production
+build
+target
+
+# misc
+.DS_Store
+.env
+npm-debug.log
+
+# emacs temporary files
+*~
+
+# IntelliJ
+.idea
+*.iml
