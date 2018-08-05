@@ -11,7 +11,6 @@ process.on('unhandledRejection', err => {
 
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
-const paths = require('../config/paths');
 const config = require('../config/webpack.config.dev');
 const devServerConfig = require('../config/webpack-dev-server.config');
 
@@ -27,5 +26,6 @@ devServer.listen(DEFAULT_PORT, HOST, err => {
     return console.log(err);
   }
 
-  console.log('Starting the development server...\n');
+  console.log('Development server listening in...');
+  console.log('http://localhost:' + DEFAULT_PORT + '\n');
 });

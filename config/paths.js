@@ -4,12 +4,8 @@ const path = require('path');
 const fs = require('fs');
 const url = require('url');
 
-// Make sure any symlinks in the project folder are resolved:
-// https://github.com/facebookincubator/create-react-app/issues/637
 const appDirectory = fs.realpathSync(process.cwd());
-const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
-
-const envPublicUrl = process.env.PUBLIC_URL;
+const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
 function ensureSlash(path, needsSlash) {
   const hasSlash = path.endsWith('/');
@@ -22,6 +18,7 @@ function ensureSlash(path, needsSlash) {
   }
 }
 
+const envPublicUrl = process.env.PUBLIC_URL;
 const getPublicUrl = appPackageJson => envPublicUrl || require(appPackageJson).homepage;
 
 // We use `PUBLIC_URL` environment variable or "homepage" field to infer
@@ -36,25 +33,14 @@ function getServedPath(appPackageJson) {
   return ensureSlash(servedUrl, true);
 }
 
-function resolvePath(dir) {
-  return path.join(__dirname, '..', dir);
-}
-
-// config after eject: we're in ./config/
 module.exports = {
   resolvePath,
-  dotenv: resolveApp('.env'),
-  appBuild: resolveApp('build'),
-  appPublic: resolveApp('public'),
-  appHtml: resolveApp('src/index.html'),
-  appIndexJs: resolveApp('src/index.js'),
-  appFavicon: resolveApp('src/favicon.ico'),
-  appPackageJson: resolveApp('package.json'),
-  appSrc: resolveApp('src'),
-  yarnLockFile: resolveApp('yarn.lock'),
-  testsSetup: resolveApp('src/setupTests.js'),
-  appNodeModules: resolveApp('node_modules'),
-  publicUrl: getPublicUrl(resolveApp('package.json')),
-  servedPath: getServedPath(resolveApp('package.json')),
-  creatorTapePath: resolveApp('node_modules/creator-tape'),
+  appPackageJson: resolvePath('package.json'),
+  appNodeModules: resolvePath('node_modules'),
+  appBuild: resolvePath('build'),
+  appSrc: resolvePath('src'),
+  appHtml: resolvePath('src/index.html'),
+  appIndexJs: resolvePath('src/index.js'),
+  publicUrl: getPublicUrl(resolvePath('package.json')),
+  servedPath: getServedPath(resolvePath('package.json')),
 };

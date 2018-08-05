@@ -26,5 +26,14 @@ module.exports = {
     ),
   },
   overlay: false,
-  quiet: true,
+  stats: {
+    assets: false,
+    cached: false,
+    children: false,
+    chunkModules: false,
+    modules: false,
+    source: false,
+    chunks: true,
+    colors: true,
+  },
 };

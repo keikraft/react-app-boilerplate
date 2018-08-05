@@ -285,7 +285,7 @@ ajv-keywords@^3.1.0:
   version "3.2.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/ajv-keywords/-/ajv-keywords-3.2.0.tgz?dl=https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-3.2.0.tgz#e86b819c602cf8821ad637413698f1dec021847a"
 
-ajv@^5.0.0, ajv@^5.1.0, ajv@^5.2.3, ajv@^5.3.0:
+ajv@^5.1.0, ajv@^5.2.3, ajv@^5.3.0:
   version "5.5.2"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/ajv/-/ajv-5.5.2.tgz?dl=https://registry.yarnpkg.com/ajv/-/ajv-5.5.2.tgz#73b5eeca3fab653e3d3f9422b341ad42205dc965"
   dependencies:
@@ -488,7 +488,7 @@ async@^1.4.0, async@^1.5.2:
   version "1.5.2"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/async/-/async-1.5.2.tgz?dl=https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
 
-async@^2.1.4, async@^2.4.1:
+async@^2.1.4:
   version "2.6.1"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/async/-/async-2.6.1.tgz?dl=https://registry.yarnpkg.com/async/-/async-2.6.1.tgz#b245a23ca71930044ec53fa46aa00a3e87c6a610"
   dependencies:
@@ -2326,15 +2326,6 @@ extglob@^2.0.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-extract-text-webpack-plugin@^3.0.2:
-  version "3.0.2"
-  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.2.tgz?dl=https://registry.yarnpkg.com/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.2.tgz#5f043eaa02f9750a9258b78c0a6e0dc1408fb2f7"
-  dependencies:
-    async "^2.4.1"
-    loader-utils "^1.1.0"
-    schema-utils "^0.3.0"
-    webpack-sources "^1.0.1"
-
 extsprintf@1.3.0:
   version "1.3.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/extsprintf/-/extsprintf-1.3.0.tgz?dl=https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.3.0.tgz#96918440e3041a7a414f8c52e3c574eb3c3e1e05"
@@ -2562,6 +2553,14 @@ fs-extra@^0.30.0:
     klaw "^1.0.0"
     path-is-absolute "^1.0.0"
     rimraf "^2.2.8"
+
+fs-extra@^7.0.0:
+  version "7.0.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/fs-extra/-/fs-extra-7.0.0.tgz?dl=https://registry.yarnpkg.com/fs-extra/-/fs-extra-7.0.0.tgz#8cc3f47ce07ef7b3593a11b9fb245f7e34c041d6"
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
 
 fs-minipass@^1.2.5:
   version "1.2.5"
@@ -3860,6 +3859,12 @@ json5@^0.5.0, json5@^0.5.1:
 jsonfile@^2.1.0:
   version "2.4.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/jsonfile/-/jsonfile-2.4.0.tgz?dl=https://registry.yarnpkg.com/jsonfile/-/jsonfile-2.4.0.tgz#3736a2b428b87bbda0cc83b53fa3d633a35c2ae8"
+  optionalDependencies:
+    graceful-fs "^4.1.6"
+
+jsonfile@^4.0.0:
+  version "4.0.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/jsonfile/-/jsonfile-4.0.0.tgz?dl=https://registry.yarnpkg.com/jsonfile/-/jsonfile-4.0.0.tgz#8771aae0799b64076b76640fca058f9c10e33ecb"
   optionalDependencies:
     graceful-fs "^4.1.6"
 
@@ -5542,12 +5547,6 @@ sax@^1.2.4:
   version "1.2.4"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/sax/-/sax-1.2.4.tgz?dl=https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
 
-schema-utils@^0.3.0:
-  version "0.3.0"
-  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/schema-utils/-/schema-utils-0.3.0.tgz?dl=https://registry.yarnpkg.com/schema-utils/-/schema-utils-0.3.0.tgz#f5877222ce3e931edae039f17eb3716e7137f8cf"
-  dependencies:
-    ajv "^5.0.0"
-
 schema-utils@^0.4.3, schema-utils@^0.4.4, schema-utils@^0.4.5:
   version "0.4.5"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/schema-utils/-/schema-utils-0.4.5.tgz?dl=https://registry.yarnpkg.com/schema-utils/-/schema-utils-0.4.5.tgz#21836f0608aac17b78f9e3e24daff14a5ca13a3e"
@@ -6280,7 +6279,7 @@ uglify-to-browserify@~1.0.0:
   version "1.0.2"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz?dl=https://registry.yarnpkg.com/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz#6e0924d6bda6b5afe349e39a6d632850a0f882b7"
 
-uglifyjs-webpack-plugin@^1.2.4:
+uglifyjs-webpack-plugin@^1.2.4, uglifyjs-webpack-plugin@^1.2.7:
   version "1.2.7"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-1.2.7.tgz?dl=https://registry.yarnpkg.com/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-1.2.7.tgz#57638dd99c853a1ebfe9d97b42160a8a507f9d00"
   dependencies:
@@ -6323,6 +6322,10 @@ unique-string@^1.0.0:
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/unique-string/-/unique-string-1.0.0.tgz?dl=https://registry.yarnpkg.com/unique-string/-/unique-string-1.0.0.tgz#9e1057cca851abb93398f8b33ae187b99caec11a"
   dependencies:
     crypto-random-string "^1.0.0"
+
+universalify@^0.1.0:
+  version "0.1.2"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/universalify/-/universalify-0.1.2.tgz?dl=https://registry.yarnpkg.com/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
 
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
