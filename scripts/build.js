@@ -16,11 +16,22 @@ const paths = require('../config/paths');
 
 fs.emptyDirSync(paths.appBuild);
 
-const compiler = webpack(config);
-compiler.run((err, stats) => {
+webpack(config, (err, stats) => {
   if (err) {
     return reject(err);
   }
 
-  console.log(stats);
+  if (stats.hasErrors()) {
+    return console.error(stats.toString('errors-only'));
+  }
+
+  console.log(
+    stats.toString({
+      colors: true,
+      cached: false,
+      children: false,
+      chunkModules: false,
+      modules: false,
+    })
+  );
 });

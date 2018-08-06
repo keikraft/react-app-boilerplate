@@ -84,16 +84,11 @@
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
     ],
     "moduleFileExtensions": [
-      "web.js",
       "mjs",
       "js",
       "json",
-      "web.jsx",
       "jsx",
       "node"
-    ],
-    "unmockedModulePathPatterns": [
-      "./node_modules/lodash"
     ],
     "reporters": [
       "default",
@@ -102,13 +97,19 @@
   },
   "eslintConfig": {
     "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
     "env": {
       "es6": true,
       "jest": true
     },
     "extends": [
       "standard",
-      "prettier"
+      "prettier",
+      "plugin:react/recommended"
     ]
   },
   "prettier": {
